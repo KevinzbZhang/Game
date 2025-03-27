@@ -1,0 +1,896 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="zh-CN"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;古风村庄探索&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>:root {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--primary-color: #8B4513;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--secondary-color: #D2B48C;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--accent-color: #A0522D;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--text-color: #333;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--light-text: #F5F5DC;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--background: #F5F5DC;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--card-bg: #FFF8DC;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'SimSun', '宋体', serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--background);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-image: url('https://img.freepik.com/free-vector/chinese-watercolor-mountain-landscape-background_52683-69025.jpg');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-size: cover;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-attachment: fixed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-position: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 800px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 248, 220, 0.8);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--accent-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.game-area {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 248, 220, 0.9);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-height: 400px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.scene-description {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 1.6;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--card-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-left: 4px solid var(--accent-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.options-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.option-btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--secondary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 12px 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: left;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.option-btn:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--accent-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--light-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.option-btn:disabled {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #ccc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: not-allowed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.input-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.custom-input {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--card-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.submit-btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 12px 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--light-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.submit-btn:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--accent-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.submit-btn:disabled {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #ccc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: not-allowed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.status-indicator {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 10px 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.loading {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(210, 180, 140, 0.5);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.success {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(144, 238, 144, 0.5);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.error {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 99, 71, 0.5);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.login-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 248, 220, 0.9);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 500px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 50px auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.login-input {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 80%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--card-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.start-btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 12px 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--light-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.start-btn:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--accent-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.npc-memory {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--card-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-left: 4px solid var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.memory-title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--accent-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.reset-btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>top: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>right: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 8px 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f44336;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.reset-btn:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #d32f2f;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.npc-info {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--card-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.npc-avatar {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 60px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 60px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--secondary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-right: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid var(--primary-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.npc-details {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.npc-name {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--accent-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.npc-description {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-color);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media (max-width: 600px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>padding: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.game-area {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>padding: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.input-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.submit-btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="login-container" id="login-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1&gt;古风村庄探索&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;请输入游戏密钥开始您的旅程&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="password" class="login-input" id="game-key" placeholder="请输入游戏密钥"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button class="start-btn" id="start-btn"&gt;开始游戏&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="status-indicator" id="login-status"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="container" id="game-container" style="display: none;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1&gt;古风村庄探索&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;每一步选择都将影响您的旅程&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="game-area"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button class="reset-btn" id="reset-btn"&gt;重置游戏&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="npc-info-container" style="display: none;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="npc-info"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="npc-avatar" id="npc-avatar"&gt;NPC&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="npc-details"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="npc-name" id="npc-name"&gt;未知人物&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="npc-description" id="npc-description"&gt;一位神秘的村民&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="scene-description" id="scene-description"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>欢迎来到古风村庄，请稍候，游戏正在加载中...</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="options-container" id="options-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- 选项将在这里动态生成 --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="input-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="text" class="custom-input" id="custom-input" placeholder="输入您想说的话或行动..."&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button class="submit-btn" id="submit-btn"&gt;发送&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="npc-memory" id="npc-memory" style="display: none;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="memory-title"&gt;NPC记忆&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div id="memory-content"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="status-indicator" id="status-indicator"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 游戏状态</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const gameState = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>currentScene: null,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>npcs: {},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>playerChoices: [],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameHistory: [],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>currentNpc: null,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>apiKey: "sk-rqfksabdnfqsdoiidifygdmkjzvhsfxcupzodalwikxrmajp",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>apiUrl: "https://api.siliconflow.cn/v1/chat/completions",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>model: "THUDM/glm-4-9b-chat"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// DOM元素</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const loginContainer = document.getElementById('login-container');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const gameContainer = document.getElementById('game-container');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const gameKeyInput = document.getElementById('game-key');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const startBtn = document.getElementById('start-btn');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const loginStatus = document.getElementById('login-status');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const resetBtn = document.getElementById('reset-btn');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const sceneDescription = document.getElementById('scene-description');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const optionsContainer = document.getElementById('options-container');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const customInput = document.getElementById('custom-input');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const submitBtn = document.getElementById('submit-btn');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const statusIndicator = document.getElementById('status-indicator');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const npcInfoContainer = document.getElementById('npc-info-container');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const npcAvatar = document.getElementById('npc-avatar');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const npcName = document.getElementById('npc-name');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const npcDescription = document.getElementById('npc-description');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const npcMemory = document.getElementById('npc-memory');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const memoryContent = document.getElementById('memory-content');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 初始化游戏</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function initGame() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 隐藏登录界面，显示游戏界面</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>loginContainer.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameContainer.style.display = 'block';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 重置游戏状态</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameState.currentScene = null;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameState.npcs = {};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameState.playerChoices = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameState.gameHistory = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameState.currentNpc = null;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 开始第一个场景</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>generateInitialScene();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 生成初始场景</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function generateInitialScene() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showLoading("正在生成您的古风村庄冒险...");</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const prompt = `你是一个古风村庄探索游戏的AI主持人。请为玩家生成游戏的第一个场景描述和2-3个选项。</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>场景要求：</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>1. 描述一个古风村庄的环境，包括时间、地点和氛围</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>2. 提供2-3个探索选项</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>3. 语言优美，有古风韵味</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>4. 每个选项用数字标出，如：1. 选项内容</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>示例格式：</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>【场景描述】</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>夕阳西下，你来到一个依山傍水的小村庄。村口的老槐树下，几位老者正在下棋，袅袅炊烟从茅草屋顶升起，空气中弥漫着柴火和饭菜的香气。</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>【选项】</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>1. 向老者们询问村庄的情况</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>2. 沿着村中的石板路随意走走</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>3. 寻找客栈先安顿下来`;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>callAI(prompt).then(response =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>parseScene(response);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>hideLoading();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}).catch(error =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showError("生成场景时出错: " + error.message);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>setTimeout(generateInitialScene, 2000);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 解析场景响应</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function parseScene(response) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 提取场景描述</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const sceneMatch = response.match(/【场景描述】([\s\S]*?)【选项】/);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const optionsMatch = response.match(/【选项】([\s\S]*)/);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (sceneMatch &amp;&amp; optionsMatch) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const description = sceneMatch[1].trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const optionsText = optionsMatch[1].trim();</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 提取选项</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const options = optionsText.split('\n')</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>.map(line =&gt; line.trim())</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>.filter(line =&gt; line.match(/^\d+\./))</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>.map(line =&gt; line.replace(/^\d+\.\s*/, ''));</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 更新游戏状态</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>gameState.currentScene = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>description,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>options</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>};</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 添加到游戏历史</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>gameState.gameHistory.push({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>type: 'scene',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>content: description,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>timestamp: new Date().toISOString()</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 更新UI</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>updateSceneUI();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>throw new Error("无法解析AI响应");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 更新场景UI</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function updateSceneUI() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 更新场景描述</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>sceneDescription.textContent = gameState.currentScene.description;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 清空选项容器</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>optionsContainer.innerHTML = '';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 添加选项按钮</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameState.currentScene.options.forEach((option, index) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const button = document.createElement('button');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.className = 'option-btn';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.textContent = option;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.addEventListener('click', () =&gt; selectOption(option));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>optionsContainer.appendChild(button);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 隐藏NPC信息（如果是新场景）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>npcInfoContainer.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>npcMemory.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 选择选项</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function selectOption(option) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 添加到游戏历史</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameState.gameHistory.push({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>type: 'choice',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>content: option,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>timestamp: new Date().toISOString()</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 禁用所有按钮</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const buttons = document.querySelectorAll('.option-btn');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>buttons.forEach(btn =&gt; btn.disabled = true);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 禁用输入</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>customInput.disabled = true;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>submitBtn.disabled = true;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showLoading("正在生成下一场景...");</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 构建提示</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>let prompt = `继续这个古风村庄探索游戏。玩家刚刚选择了: "${option}"。</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>请根据这个选择生成:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>1. 新的场景描述（包括环境、NPC等）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>2. 如果有NPC互动，生成NPC的简短提示词（姓名、外貌、性格等）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>3. 2-3个新的选项</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>4. 保持古风语言风格</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>格式要求：</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>【场景描述】</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>[场景内容]</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>【NPC提示词】（如果没有NPC则省略）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>姓名: [名字]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>外貌: [描述]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>性格: [描述]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>背景: [简短背景]</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>【选项】</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>1. [选项1]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>2. [选项2]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>3. [选项3]`;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 添加上下文记忆</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (gameState.gameHistory.length &gt; 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>prompt += "\n\n【游戏历史】";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>gameState.gameHistory.slice(-3).forEach(item =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>prompt += `\n${item.type === 'scene' ? '场景' : '选择'}: ${item.content}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>callAI(prompt).then(response =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>parseNextScene(response, option);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>hideLoading();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}).catch(error =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showError("生成场景时出错: " + error.message);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 重新启用交互</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>buttons.forEach(btn =&gt; btn.disabled = false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>customInput.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>submitBtn.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 解析下一个场景</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function parseNextScene(response, chosenOption) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 提取场景描述</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const sceneMatch = response.match(/【场景描述】([\s\S]*?)(【NPC提示词】|【选项】|$)/);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const npcMatch = response.match(/【NPC提示词】([\s\S]*?)【选项】/);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const optionsMatch = response.match(/【选项】([\s\S]*)/);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (sceneMatch) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const description = sceneMatch[1].trim();</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 更新游戏状态</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>gameState.currentScene = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>description,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>options: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>};</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 添加到游戏历史</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>gameState.gameHistory.push({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>type: 'scene',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>content: description,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>timestamp: new Date().toISOString()</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 处理NPC</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (npcMatch) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const npcText = npcMatch[1].trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const npcNameMatch = npcText.match(/姓名:\s*(.+)/);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const npcAppearanceMatch = npcText.match(/外貌:\s*(.+)/);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const npcPersonalityMatch = npcText.match(/性格:\s*(.+)/);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const npcBackgroundMatch = npcText.match(/背景:\s*(.+)/);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (npcNameMatch) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>const name = npcNameMatch[1].trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>const appearance = npcAppearanceMatch ? npcAppearanceMatch[1].trim() : "未知";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>const personality = npcPersonalityMatch ? npcPersonalityMatch[1].trim() : "未知";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>const background = npcBackgroundMatch ? npcBackgroundMatch[1].trim() : "未知";</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// 创建或更新NPC</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>if (!gameState.npcs[name]) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>gameState.npcs[name] = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>name,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>appearance,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>personality,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>background,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>memory: [`初次见面: ${chosenOption}`]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>gameState.npcs[name].memory.push(`互动: ${chosenOption}`);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>gameState.currentNpc = name;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// 更新NPC UI</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>updateNpcUI(name);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>gameState.currentNpc = null;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>npcInfoContainer.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>npcMemory.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 处理选项</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (optionsMatch) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const optionsText = optionsMatch[1].trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const options = optionsText.split('\n')</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>.map(line =&gt; line.trim())</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>.filter(line =&gt; line.match(/^\d+\./))</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>.map(line =&gt; line.replace(/^\d+\.\s*/, ''));</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>gameState.currentScene.options = options;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 更新UI</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>updateSceneUI();</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 重新启用输入</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>customInput.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>submitBtn.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>throw new Error("无法解析AI响应");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 更新NPC UI</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function updateNpcUI(npcName) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const npc = gameState.npcs[npcName];</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 显示NPC信息</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>npcInfoContainer.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>npcName.textContent = npc.name;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>npcDescription.textContent = `${npc.appearance}，性格${npc.personality}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>npcAvatar.textContent = npc.name.charAt(0);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 显示NPC记忆</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>npcMemory.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>memoryContent.innerHTML = npc.memory.map(m =&gt; `• ${m}`).join('&lt;br&gt;');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 处理自定义输入</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function handleCustomInput() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const inputText = customInput.value.trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!inputText) return;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 添加到游戏历史</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gameState.gameHistory.push({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>type: 'input',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>content: inputText,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>timestamp: new Date().toISOString()</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 清空输入</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>customInput.value = '';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 禁用输入</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>customInput.disabled = true;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>submitBtn.disabled = true;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showLoading("正在处理您的输入...");</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 构建提示</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>let prompt = `在古风村庄探索游戏中，玩家选择了自由输入: "${inputText}"。</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>请根据这个输入生成:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>1. 游戏世界的反应或新场景描述</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>2. 如果有NPC互动，生成NPC的回应</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>3. 2-3个新的选项</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>4. 保持古风语言风格</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>格式要求：</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>【场景描述】</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>[场景内容]</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>【NPC回应】（如果没有NPC则省略）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>[NPC的对话回应]</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>【选项】</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>1. [选项1]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>2. [选项2]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>3. [选项3]`;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 添加上下文记忆</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (gameState.gameHistory.length &gt; 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>prompt += "\n\n【游戏历史】";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>gameState.gameHistory.slice(-3).forEach(item =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>prompt += `\n${item.type === 'scene' ? '场景' : item.type === 'choice' ? '选择' : '输入'}: ${item.content}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 如果有当前NPC，添加NPC记忆</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (gameState.currentNpc) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const npc = gameState.npcs[gameState.currentNpc];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>prompt += `\n\n【当前NPC记忆】\n${npc.memory.join('\n')}`;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 添加到NPC记忆</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>npc.memory.push(`玩家说: ${inputText}`);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>callAI(prompt).then(response =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>parseCustomInputResponse(response, inputText);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>hideLoading();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}).catch(error =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showError("处理输入时出错: " + error.message);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 重新启用输入</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>customInput.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>submitBtn.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 解析自定义输入响应</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function parseCustomInputResponse(response, inputText) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 提取场景描述</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const sceneMatch = response.match(/【场景描述】([\s\S]*?)(【NPC回应】|【选项】|$)/);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const npcResponseMatch = response.match(/【NPC回应】([\s\S]*?)【选项】/);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const optionsMatch = response.match(/【选项】([\s\S]*)/);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (sceneMatch) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>let description = sceneMatch[1].trim();</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 如果有NPC回应，添加到描述中</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (npcResponseMatch &amp;&amp; gameState.currentNpc) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const npcResponse = npcResponseMatch[1].trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>description += `\n\n${gameState.currentNpc}回应道："${npcResponse}"`;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>// 添加到NPC记忆</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>gameState.npcs[gameState.currentNpc].memory.push(`回应: ${npcResponse}`);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 更新游戏状态</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>gameState.currentScene = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>description,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>options: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>};</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 添加到游戏历史</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>gameState.gameHistory.push({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>type: 'scene',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>content: description,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>timestamp: new Date().toISOString()</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 处理选项</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (optionsMatch) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const optionsText = optionsMatch[1].trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const options = optionsText.split('\n')</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>.map(line =&gt; line.trim())</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>.filter(line =&gt; line.match(/^\d+\./))</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>.map(line =&gt; line.replace(/^\d+\.\s*/, ''));</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>gameState.currentScene.options = options;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 更新UI</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>updateSceneUI();</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 如果有当前NPC，更新NPC UI</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (gameState.currentNpc) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>updateNpcUI(gameState.currentNpc);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 重新启用输入</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>customInput.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>submitBtn.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>throw new Error("无法解析AI响应");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 调用AI API</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function callAI(prompt) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showLoading("正在与AI交互...");</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const response = await fetch(gameState.apiUrl, {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>method: 'POST',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>headers: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>'Content-Type': 'application/json',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>'Authorization': `Bearer ${gameState.apiKey}`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>body: JSON.stringify({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>model: gameState.model,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>messages: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>role: "user",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>content: prompt</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>temperature: 0.7,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>max_tokens: 1000</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>})</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (!response.ok) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>throw new Error(`API请求失败: ${response.status}`);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const data = await response.json();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return data.choices[0].message.content;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("API调用错误:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>throw error;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} finally {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>hideLoading();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 显示加载状态</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function showLoading(message) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.className = 'status-indicator loading';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.textContent = message;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 隐藏加载状态</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function hideLoading() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 显示成功状态</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function showSuccess(message) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.className = 'status-indicator success';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.textContent = message;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>setTimeout(hideLoading, 2000);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 显示错误状态</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function showError(message) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.className = 'status-indicator error';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.textContent = message;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>setTimeout(hideLoading, 3000);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 重置游戏</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function resetGame() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (confirm("确定要重置游戏吗？所有进度将丢失。")) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>initGame();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 事件监听器</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>startBtn.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const key = gameKeyInput.value.trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (key === "作者最帅") {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showLoading("验证密钥...");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>hideLoading();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>initGame();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}, 1000);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>loginStatus.className = 'status-indicator error';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>loginStatus.textContent = "密钥不正确，请重试";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>loginStatus.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>gameKeyInput.addEventListener('keypress', (e) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (e.key === 'Enter') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>startBtn.click();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>submitBtn.addEventListener('click', handleCustomInput);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>customInput.addEventListener('keypress', (e) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (e.key === 'Enter') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>submitBtn.click();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>resetBtn.addEventListener('click', resetGame);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
